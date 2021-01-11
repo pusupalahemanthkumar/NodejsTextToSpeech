@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Online text to speech Convertor" />
+    <meta
+      name="keywords"
+      content="Online text to speech Convertor, online text to speech , online tts Convertor"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="/icons/icon-64x64.png" />
+
+    <title>Online Text To Speech Convertor</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.4;
+      }
+      header {
+        background: #0080ff;
+        padding: 1rem;
+        color: #fff;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .container {
+        max-width: 70%;
+        margin: 1rem auto;
+        padding: 1rem;
+      }
+      @media (max-width: 760px) {
+        .container {
+          max-width: 90%;
+          margin: 1rem auto;
+          padding: 1rem;
+        }
+      }
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        color: #0080ff;
+      }
+      .form-group {
+        margin: 0.75rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .form-group label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      .form-group textarea {
+        width: 100%;
+        border-radius: 20px;
+        outline: none;
+        padding: 1rem;
+      }
+      .form-group select {
+        width: 100%;
+        color: #0080ff;
+        padding: 0.5rem;
+        border-radius: 20px;
+        outline: none;
+      }
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border: 2px solid #0080ff;
+      }
+      .form-group select option {
+        border-radius: 20px;
+      }
+      .btn {
+        background: #0080ff;
+        color: #f4f4f4;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        padding: 0.5rem 2rem;
+        border: 2px solid #dddd;
+        transition: all 0.3s;
+      }
+      .btn:hover {
+        background: #f4f4f4;
+        color: #0080ff;
+        border: 2px solid #0080ff;
+      }
+      .btn-secondary {
+        background: #f4f4f4;
+        color: #0080ff;
+        border: 2px solid #0080ff;
+        transition: all 0.3s;
+      }
+      .btn-secondary:hover {
+        background: #0080ff;
+        color: #f4f4f4;
+        border: 2px solid #dddd;
+      }
+      .btn-action {
+        margin: 1rem auto;
+      }
+      .download-actions {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center">Online Text To Speech Convertor</h1>
+    </header>
+    <div class="container">
+      <form action="/convert" class="form-container" method="POST">
+        <div class="form-group">
+          <label for="text">Enter Text</label>
+          <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="language">Select Language</label>
+          <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="en-au">English (Australia)</option>
+            <option value="en-uk">English (United Kingdom)</option>
+            <option value="en-us">English (United States)</option>
+            <option value="eo">Esperanto</option>
+            <option value="fi">Finnish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="el">Greek</option>
+            <option value="hi">Hindi</option>
+            <option value="af">Afrikaans</option>
+            <option value="sq">Albanian</option>
+            <option value="sq">Albanian</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+        <div class="btn-action">
+          <button type="submit" class="btn btn-secondary">Download</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
